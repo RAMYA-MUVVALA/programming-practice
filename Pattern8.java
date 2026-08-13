@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Pattern7 {
+class Pattern8 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
@@ -9,17 +9,17 @@ class Pattern7 {
             int n=sc.nextInt();
             for(int i=0;i<n;i++)
             {
-                for(int j=0;j<n-i-1;j++)
+                for(int j=0;j<i;j++)
                 {
                     //space
                     System.out.print(" ");
                 }
-                for(int j=0;j<2*i+1;j++)
+                for(int j=0;j<(2*n-(2*i+1));j++)
                 {
                     //star
                     System.out.print("*");
                 }
-                for(int j=0;j<n-i-1;j++)
+                for(int j=0;j<i;j++)
                 {
                     System.out.print(" ");
                 }
@@ -29,3 +29,4 @@ class Pattern7 {
     }
     
 }
+

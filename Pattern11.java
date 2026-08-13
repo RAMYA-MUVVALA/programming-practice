@@ -1,31 +1,34 @@
 import java.util.Scanner;
-class Pattern7 {
+class Pattern11 {
     public static void main(String args[])
     {
         Scanner sc=new Scanner(System.in);
+        System.out.println("Enter no of testcases:");
         int t=sc.nextInt();
         while(t-->0)
         {
+            System.out.println("Enter n value: ");
             int n=sc.nextInt();
+            int start=1;
             for(int i=0;i<n;i++)
             {
-                for(int j=0;j<n-i-1;j++)
+                if(i%2==0)
                 {
-                    //space
-                    System.out.print(" ");
+                    start=1;
                 }
-                for(int j=0;j<2*i+1;j++)
+                else
                 {
-                    //star
-                    System.out.print("*");
+                    start=0;
                 }
-                for(int j=0;j<n-i-1;j++)
+                for(int j=0;j<=i;j++)
                 {
-                    System.out.print(" ");
+                    System.out.print(start);
+                    start=1-start;
                 }
                 System.out.println();
+
             }
         }
+
     }
-    
 }
