@@ -11,13 +11,7 @@ class Pattern18 {
             int n=sc.nextInt();
             for(int i=0;i<n;i++)
             {
-                int ch=69;
-                for(int j=0;j<=i;j++)
-                {
-                    System.out.print((char)(ch));
-                    ch--;
-                }
-                System.out.println();
+                
             }
         }
     }
