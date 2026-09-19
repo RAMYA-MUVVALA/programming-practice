@@ -1,5 +1,6 @@
 import java.util.*;
-class Selection_sort {
+class Bubble_sort {
+   
     static void swap(int[] a,int i,int j)
     {
         int temp=a[i];
@@ -17,21 +18,23 @@ class Selection_sort {
         {
             a[i]=sc.nextInt();
         }
-        int i=0;
-        while(i<n-1)
+        int didswap=0; // to check if input array is already sorted
+        for(int i=n-1;i>=1;i--)
         {
-            int min=i;
-            for(int j=i;j<n;j++)
+            for(int j=0;j<i;j++)
             {
-                if(a[j]<a[min])
+                if(a[j]>a[j+1])
                 {
-                    min=j;
+                    swap(a,j,j+1);
+                    didswap=1;
                 }
-                swap(a,i,min);
-        
             }
-            i++;
+            if(didswap==0)
+            {
+                break;
+            }
         }
+      
         System.out.println("After swapping array elemets are :");
         for(int k=0;k<n;k++)
         {
@@ -39,5 +42,7 @@ class Selection_sort {
         }
     }
     
+
+// Time complexity=O(n^2) for worst and average cas
+// Time complexity=O(n) for best case i.e when taken array is already sorted
 }
-// Time complexity=O(n^2)
