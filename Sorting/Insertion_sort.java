@@ -34,4 +34,5 @@ class Insertion_sort {
     }
     
 }
-// Time complexity=O(n^2)
+// Time complexity=O(n^2) for worst and average case
+//Time complexity=O(n) for best case i.e input array is already sorted
